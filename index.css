@@ -1,17 +1,10 @@
 /*
-0 - 600px:      Phone
-600 -900px:     Table Portrait
-900 - 1200px:   Table Landscape
+0 - 37.5em -> 0 - 600px:      Phone
+37.5em - 56.25em -> 600 -900px:     Table Portrait
+56.25em - 75em -> 900 - 1200px:   Table Landscape
+
 [1200 - 1800] is where normal styles apply
 1800px + :      Big Desktop
-
-$breakpoint argument choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px 
 Note: em is the one that works well in media queries
@@ -135,6 +128,7 @@ body {
 
     backface-visibility: hidden; /*for animation not to be shaky*/
     margin-bottom: 1rem; /*white space*/
+    text-align: center;
 }
 
 .heading-primary--main {
@@ -185,7 +179,6 @@ body {
     padding: .5rem 1rem;
     margin-top: 2rem;;
     display: inline-block;
-    /* border: 2px solid var(--color-primary-dark); */
     font-family: "Lato", sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -401,7 +394,7 @@ body {
 
 
 
-.paragraph, .about-interest ,.feature-box__text  {
+.paragraph, .about-interest ,.project-box__text {
     font-family: "Lato", sans-serif;
     font-size: 1.6rem; 
     text-align: justify;
@@ -409,7 +402,8 @@ body {
     color: black;
 } 
 
-.feature-box__text {
+
+.project-box__text {
     padding: 1rem 1rem;
 }
 
@@ -422,14 +416,10 @@ body {
 }
 
 .row {
-    max-width: 120rem;
-    margin: 0 2rem; 
+    max-width: 100%;
+    margin: 0 20rem; 
 }
 
-.row {
-    max-width: 100%;
-    padding: 0 20rem; 
-}  
 
 .row::after {
   content: "";
@@ -484,7 +474,7 @@ body {
     width: calc((100% - 3 * 6rem) / 4); } */
 
 
-.feature-box {
+.project-box {
     background-color: rgba(238, 234, 234, 1);
     font-size: 1rem;
     padding: 1rem 1rem;
@@ -498,21 +488,11 @@ body {
 }
    
 
-/* .feature-box__icon {
-    font-size: 4rem;
-    margin-bottom: .5rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent; 
-} */
-
 .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); } 
 
 
-.feature-box:hover {
+.project-box:hover {
     transform: translateY(-1.5rem) scale(1.03); 
 }
 
@@ -520,7 +500,7 @@ body {
     margin-bottom: 1.5rem !important; 
 }
 
-.section__logo {
+.project__logo {
     height: 20rem;
     width: auto;
 }
@@ -554,9 +534,6 @@ body {
     opacity: 0;
 }
 
-/* .hidden {
-    display: none;
-} */
 
 .heading-projects {
     text-transform: uppercase;
@@ -568,70 +545,138 @@ body {
     font-weight: 600;
     
 }
- h4
-{
-    background: linear-gradient(to right, var(--color-primary-dark), rgba(202,233,255,1)); 
-    background-clip: text;
-}
-/* --color-primary-light: rgba(202,233,255,1);
---color-primary-medium: rgba(98,144,195,1);
---color-primary-dark:rgba(5,74,145, 0.8);
 
---font:rgba(238, 234, 234, 1); */
-
-/* rgba(5,74,145, 0.8) */
-/* .hidden {
-    display: none;
-} */
-
-@media only screen and (max-width: 56.25em) {
-      .navigation__button {
-        top: 4rem;
-        right: 4rem; 
-        background-color: #fff;
-        height: 6rem;
-        width: 6rem;
-        position: fixed;
-        top: 7rem;
-        right: 7rem;
-        border-radius: 50%;
-        z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-        text-align: center;
-        cursor: pointer; 
+@media only screen and (min-width: 56.25em) and (max-width: 75em) {
+    html {
+      font-size: 56.25%; 
     } 
-    .navigation__background {
-            top: 4.5rem;
-            right: 4.5rem; 
+    body {
+        font-size: 56.25%; 
     } 
-    .heading-secondary {
-            font-size: 3rem; 
-    }
-    .feature-box {
-        padding: 2rem; 
-    } 
-    .row [class^="col-"]:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 6rem; 
-    }
-    .row [class^="col-"] {
-        width: 100% !important; 
-    }
-
-}
-
-
-@media only screen and (max-width: 37.5em) {
-      .navigation__button {
-        top: 3rem;
-        right: 3rem; 
-    }
-    .heading-secondary {
+    .paragraph, .about-interest ,.project-box__text {
         font-size: 2.5rem; 
-    }
-    .navigation__background {
-        top: 3.5rem;
-        right: 3.5rem; 
     } 
-} 
+    .projects-tech{
+        margin: .3rem 1rem;
+    }
+    .row {
+        max-width: 100%;
+        margin: 0 10rem; 
+    }
+}
+  
+@media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
+    html {
+      font-size: 50%; 
+    } 
+
+    .heading-secondary {
+      font-size: 4rem; 
+    } 
+
+    .heading-primary--sub {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .8rem;
+    }
+
+    .project-box {
+      font-size: .5rem;
+       padding: .5rem .5rem;
+	   width: 35rem;
+       height: 40rem;
+       margin-right: 1rem;
+    }
+
+    .project__logo {
+        height: 15rem;
+        width: auto;
+    }
+    .paragraph, .about-interest ,.project-box__text {
+        font-size: 2rem; 
+    } 
+
+    .projects-tech{
+        margin: .3rem 1rem;
+    }
+}
+
+
+@media only screen and (min-width: 20em) and (max-width: 37.5em) {
+    .heading-primary {
+      font-size: 50%; 
+    } 
+    .heading-primary--main {
+        letter-spacing: .5rem;
+        font-size: 3rem; 
+    }
+ 	.heading-primary--sub {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: .1rem; 
+    } 
+
+    .heading-secondary {
+      font-size: 4rem; 
+    }
+    
+    #section-projects {
+        padding: 10 0;
+        margin-top: -5rem; 
+        padding: 15rem 0;
+        margin-top: -6rem; 
+    }
+ 
+    .project-box {
+        font-size: .5rem;
+        padding: .5rem .5rem;
+        width: 25rem;
+        height: 35rem;
+        margin: 0 0;
+      }
+  
+      .project__logo {
+          height: 10rem;
+          width: auto;
+      }
+      .paragraph, .about-interest ,.project-box__text {
+          font-size: 1.5rem; 
+      } 
+  
+      .projects-tech{
+          margin: .3rem 1rem;
+      } 
+
+      .btn--blue{
+        padding: 0;
+        margin-top: 1.5rem;;
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 0;
+    }
+
+    .row {
+        max-width: 120rem;
+        margin: 1rem 4rem; 
+        padding: 0;
+    }
+
+    #section-about {
+        font-weight: 400;
+        padding: 13rem 0;
+        margin-top: -20vh; 
+
+    }
+      
+}
+
+
+
+@media only screen and (min-width: 112.15em) {
+    html {
+      font-size: 75%; 
+    } 
+}
+
+ 
 
