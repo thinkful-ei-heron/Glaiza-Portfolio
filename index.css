@@ -1,10 +1,22 @@
-/* 
-COLORS:
+/*
+0 - 600px:      Phone
+600 -900px:     Table Portrait
+900 - 1200px:   Table Landscape
+[1200 - 1800] is where normal styles apply
+1800px + :      Big Desktop
 
-font-title: rgba(255, 232, 209, 1);
-font:rgba(238, 234, 234, 1);
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
 
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px 
+Note: em is the one that works well in media queries
 */
+
 :root {
     
 --color-primary-light: rgba(202,233,255,1);
@@ -14,85 +26,6 @@ font:rgba(238, 234, 234, 1);
 --font:rgba(238, 234, 234, 1);
 }
 
-
-* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-  }
-
-  html {
-      font-size: 62.5%;
-  }
-
-body, main {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: white;
-    padding: 1.875rem;
-}
-
-
-/* Main Page Header */
-#header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom, rgba(5,74,145, 0.8),rgba(202,233,255, 0.8)), url(./img/glaizaW-pic.png);
-    background-size: cover;
-    /* background-position: right; */
-    /* background-repeat: no-repeat; */
-
-    position: relative;
-
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y) */
-
-}
-
-.header__logo-box {
-    position: absolute;
-    top: 2rem;
-    left: 3rem;
-}
-
-.header__logo {
-    height: 10rem;
-    width: 10rem;
-    
-}
-
-.header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* text-align: center; */
-}
-.heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-
-    backface-visibility: hidden; /*for animation not to be shaky*/
-    margin-bottom: 1rem; /*white space*/
-}
-
-.heading-primary--main {
-    display: block;
-    font-size: 5rem;
-    font-weight: 900;
-    letter-spacing: .75rem;
-
-    animation: moveInLeft 1s ease-out;
-}
-
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 1rem;
-    animation: moveInRight 1s ease-out;
-}
 
 @keyframes moveInLeft {
     0% {
@@ -140,6 +73,87 @@ body, main {
     }
 
 }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+
+html {
+      font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: white;
+    padding: 1.875rem;
+    box-sizing: border-box;
+}
+
+
+/* Main Page Header */
+#header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(5,74,145, 0.8),rgba(202,233,255, 0.8)), url(./img/glaizaW-pic.png);
+    background-size: cover;
+
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y) */
+
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+}
+
+.header__logo {
+    height: 10rem;
+    width: 10rem;
+    
+}
+
+.header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /*for animation not to be shaky*/
+    margin-bottom: 1rem; /*white space*/
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: .75rem;
+
+    animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    animation: moveInRight 1s ease-out;
+}
+
 
 .btn:link,
 .btn:visited {
@@ -574,6 +588,17 @@ body, main {
       .navigation__button {
         top: 4rem;
         right: 4rem; 
+        background-color: #fff;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: 7rem;
+        right: 7rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer; 
     } 
     .navigation__background {
             top: 4.5rem;
