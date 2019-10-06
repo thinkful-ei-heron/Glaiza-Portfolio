@@ -277,7 +277,8 @@ body {
     font-size: 3rem;
     font-weight: 300;
     padding: 1rem 2rem;
-    color: #fff;
+    /* color: #fff; */
+    color: rgba(0,0,102,1);
     text-decoration: none;
     text-transform: uppercase;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
@@ -292,7 +293,7 @@ body {
   
 .navigation__link:hover, .navigation__link:active {
     background-position: 100%;
-    color: var(--color-primary-dark);
+    color: ;
     transform: translateX(1rem); 
     font-weight: 400;
 }
@@ -553,8 +554,9 @@ body {
     body {
         font-size: 56.25%; 
     } 
+
     .paragraph, .about-interest ,.project-box__text {
-        font-size: 2.5rem; 
+        font-size: 2rem; 
     } 
     .projects-tech{
         margin: .3rem 1rem;
@@ -592,6 +594,7 @@ body {
         height: 15rem;
         width: auto;
     }
+
     .paragraph, .about-interest ,.project-box__text {
         font-size: 2rem; 
     } 
