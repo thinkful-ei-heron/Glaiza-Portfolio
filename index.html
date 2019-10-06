@@ -4,68 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Glaiza E. Wagner</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <title>GW Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script src="https://kit.fontawesome.com/5a8003b52b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/index.css">
-
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
     <link rel="shortcut icon" type="image/png" href="#">
 </head>
 <body>
-    <!--Sidebar for About Me and Portfolio -->
-    <div class="sidebar">
-        <label for="sidebar-about-me">About Me</label>
-        <label for="sidebar-portfolio">Portfolio</label>
-        <label for="sidebar-portfolio">Resume</label>
-        <label for="sidebar-portfolio">Contact</label>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="menulinks hidden"></div>
+        
+        <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#section-about" class="navigation__link" target="#section-about"><span>01</span>About Me</a></li>
+                    <li class="navigation__item"><a href="#section-projects" class="navigation__link" target="#section-projects"><span>02</span>Projects</a></li>
+                    <li class="navigation__item"><a href="#resume" class="navigation__link"><span>03</span>Resume</a></li>
+                    <li>_________________________</li>
+                    <li class="navigation__contact"><a href="https://www.linkedin.com/in/glaizawagner" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="navigation__contact"><a href="https://github.com/glaizawagner" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                    <li class="navigation__contact"><a href="mailto:glaizawagner@gmail.com?subject=subject text"><i class="far fa-envelope"></i></a></li>
+                    <p class="copyright">
+                            &copy;  Glaiza E. Wagner 2019
+                    </p>
+                    
+                </ul>
+            </nav>
     </div>
+    
+    <header id="header">
+        <div class="header__logo-box">
+            <img src="./img/logo-white.png" alt="logo" class="header__logo">
+        </div>
 
-    <!--Main Header -->
-    <header class="header">
-        <h1>Design is not just what it looks like and feels like. Design is how it works. By: Steve Jobs</h1>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Glaiza Wagner</span>
+                <span class="heading-primary--sub">Software Developer</span>
+            </h1>
+
+            <!-- <a href="#" class="btn btn--white btn--animated">Check completed projects</a> -->
+        </div>
+        
     </header>
+    <main>
+        <section id="section-about">
+                    <div class="u-center-text u-margin-bottom-big">
+                        <h2 class="heading-secondary">
+                            About me page
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <p class="paragraph">I started web developing, without any prior knowledge. My love of creative, intuitive smartphone apps inspired me to take this training to get to a new level and build apps.
 
-    <!--Contact Section-->
-    <div class="contact-section">
-        <h3 class="contact-section-heading">Contact Section</h3>
-        <ul class="contact-details">
-            <li><i class="fas fa-map-marker-alt">Phoenix, AZ</i></li>
-            <li><i class="far fa-envelope"></i>glaizawagner@gmail.com</li>
-            <li><i class="fas fa-mobile-alt"></i>(602) 376-4470</li>
-            <li><i class="fab fa-linkedin"></i> <span> https://www.linkedin.com/in/glaizawagner
-                <a href="https://www.linkedin.com/in/glaizawagner" target="_blank"></li>
-            </span>
-                
-            <li><i class="fab fa-github-square"></i> <span> https://github.com/glaizawagner
-                <a href="https://github.com/glaizawagner" target="_blank"></></li>
-            </span>
-               
-        </ul>
-    </div>
+                                It’s like a dream turning into reality. I will always be grateful and honored that I found Thinkful and for the opportunity they gave me. Thinkful helped me unlock my potential as well as encouraging me that I can achieve my dream.
+                                
+                                I began my career as an IT Analyst, moving up to an IT Instructor, and eventually being recruited to work in Singapore as an IT Executive.
+                                
+                        <p></p>
+                            <h3 class="heading-tertiary u-margin-bottom-small">
+                                    Interest/Hobbies
+                            </h3>
+                            <ul class="about-interest">
+                              
+                                <li><i class="fas fa-caret-right"></i>I'm a foodie with an international palette</li>
+                                <li><i class="fas fa-caret-right"></i>Playing snooker and bowling</li>
+                                <li><i class="fas fa-caret-right"></i>Traveling in nearby places or out of the country</li>
+                                <li><i class="fas fa-caret-right"></i>New experiences and adventures</li>
+                                <li><i class="fas fa-caret-right"></i>Baking/cooking when have lots of extra time</li>
+                            </ul>
+                    
+                    </div>
+                        
+        </section>
 
-    <!--About Me Page-->
-    <section class="aboutMe">
-        <h2>Glaiza Wagner</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis assumenda voluptatem esse, in sequi quasi libero nostrum earum, alias ad, quidem provident veniam. Vitae, aspernatur molestias natus inventore quis quibusdam!</p>
-        <ul class="interest">
-            <li>Playing Snooker and bowling</li>
-            <li>Playing tongits war online..Lol</li>
-            <li>Baking/cooking when have lots of extra time</li>
-            <li>Love to travel and do adventorous stuff</li>
-        </ul>
+        <section id="section-projects">
+                <div class="row">
+                        
+                    <div class="col-1-of-2">
+                        <div class="feature-box">
+                            <h4 class="heading-tertiary u-margin-bottom-small">Quiz app</h4>
+                            <p class="feature-box__text u-margin-bottom-small">
+                                    A 10 question quiz that will test your knowledge in HTML/CSS and Javascript.
+                            </p>
+                            <img src="./img/quiz.png" alt="logo" class="section__logo">
 
-    </section>
+                            <div class="projects-tech"><span><i class="fab fa-html5">HTML </i><i class="fab fa-css3-alt">CSS </i><i class="fab fa-js-square">JS</i></span></div>
+                            <a href="https://glaizawagner.github.io/Jonny-Glaiza-QuizGame/" class="btn btn--blue btn--animated">Live App</a>
+                            <a href="https://github.com/glaizawagner/Jonny-Glaiza-QuizGame" class="btn btn--blue btn--animated">Github</a>
 
-    <!--Portfolio Page-->
-    <section class="portfolio">
-        <h4>Portfolio Section</h4>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil iusto mollitia tempore dolores veritatis doloribus dolorum nostrum alias harum, neque impedit illo ducimus suscipit unde aspernatur commodi eligendi, assumenda velit.</p>
-    </section>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                            <div class="feature-box">
+                                <h4 class="heading-tertiary u-margin-bottom-small">Bookmark App</h4>
+                                <p class="feature-box__text u-margin-bottom-small">
+                                    This application allows user to save their favorite bookmarks.
+                                </p>
+                                <img src="./img/bookmark.png" alt="logo" class="section__logo">
 
-    <!--Footer-->
-    <p class="copyright">
-        &copy; Copyright 2019 by: Glaiza E. Wagner
-    </p>
+                                <div class="projects-tech"><span><i class="fab fa-html5">HTML </i><i class="fab fa-css3-alt">CSS </i><i class="fab fa-js-square">JS</i></span></div>
+                                <a href="https://thinkful-ei-heron.github.io/glaiza-bookmark-app/" class="btn btn--blue btn--animated">Live App</a>
+                                <a href="https://github.com/thinkful-ei-heron/glaiza-bookmark-app" class="btn btn--blue btn--animated">Github</a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+    
+    </main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
