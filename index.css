@@ -276,7 +276,6 @@ body {
     font-size: 3rem;
     font-weight: 300;
     padding: 1rem 2rem;
-    /* color: #fff; */
     color: rgba(0,0,102,1);
     text-decoration: none;
     text-transform: uppercase;
@@ -292,7 +291,7 @@ body {
   
 .navigation__link:hover, .navigation__link:active {
     background-position: 100%;
-    color: ;
+    color: rgba(0,0,102,1);
     transform: translateX(1rem); 
     font-weight: 400;
 }
