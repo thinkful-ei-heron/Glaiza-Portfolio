@@ -444,7 +444,7 @@ body, main {
 .about-interest > li > i {
     font-size: 2rem;
     margin-right: 1.5rem;
-    color: var(--color-primary-medium);
+    color: var(--color-primary-dark);
 }
 
 
