@@ -309,6 +309,7 @@ body {
     position: relative;
     margin-top: 3rem; 
 }
+
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
@@ -538,26 +539,121 @@ body {
     
 }
 
-@media only screen and (min-width: 56.25em) and (max-width: 75em) {
-    html {
-      font-size: 56.25%; 
-    } 
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 37.5em) {
     body {
-        font-size: 56.25%; 
+        line-height: 1.5;
+        padding:0;
+    }
+
+    #header {
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); /*(x y, x y, x y, x y) */
+    
+    }
+
+
+    .heading-primary--main {
+        letter-spacing: 0;
+        font-size: 1.8rem; 
+    }
+
+ 	.heading-primary--sub {
+        font-size: .9rem;
+        font-weight: 600;
+        letter-spacing: .1rem; 
     } 
 
-    .paragraph, .about-interest ,.project-box__text {
-        font-size: 2rem; 
-    } 
-    .projects-tech{
-        margin: .3rem 1rem;
+    .header__logo-box {
+        top: 1.5rem;
+        left: 1.5rem;
     }
-    .row {
-        max-width: 100%;
-        margin: 0 10rem; 
+    
+    .header__logo {
+        height: 5rem;
+        width: 5rem;
+        
     }
-}
+    
+   .navigation__button {
+        height: 3rem;
+        width: 3rem;
+        top: 2rem;
+        right: 2rem;
+    }
   
+    .navigation__background {
+        height: 3rem;
+        width: 3rem;
+        top: 2rem;
+        right: 2rem;
+    }
+    
+    .navigation__icon {
+        margin-top: 1.5rem; 
+    }
+    
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+        width: 2rem;
+        height: 1.5px;
+
+    } 
+
+    .heading-secondary {
+        font-size: 4rem; 
+    }
+    
+    #section-projects {
+        padding: 10 0;
+        margin-top: -5rem; 
+        padding: 15rem 0;
+        margin-top: -6rem; 
+    }
+ 
+    .project-box {
+        font-size: .5rem;
+        padding: .5rem .5rem;
+        width: 25rem;
+        height: 35rem;
+        margin: 0 0;
+      }
+  
+      .project__logo {
+          height: 5rem;
+          width: auto;
+      }
+      .paragraph, .about-interest ,.project-box__text {
+          font-size: 1.5rem; 
+      } 
+  
+      .projects-tech{
+          margin: .3rem 1rem;
+      } 
+
+      .btn-blue{
+        padding: 0;
+        margin-top: 1.5rem;;
+        font-size: .8rem;
+        font-weight: 600;
+        padding: 0;
+    }
+
+    .row {
+        max-width: 120rem;
+        margin: 1rem 4rem; 
+        padding: 0;
+    }
+
+    #section-about {
+        font-weight: 400;
+        padding: 13rem 0;
+        margin-top: -20vh; 
+
+    }
+      
+}
+
 @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
     html {
       font-size: 50%; 
@@ -595,73 +691,24 @@ body {
     }
 }
 
-
-@media only screen and (min-width: 20em) and (max-width: 37.5em) {
-    .heading-primary {
-      font-size: 50%; 
+@media only screen and (min-width: 56.25em) and (max-width: 75em) {
+    html {
+      font-size: 56.25%; 
     } 
-    .heading-primary--main {
-        letter-spacing: .5rem;
-        font-size: 3rem; 
-    }
- 	.heading-primary--sub {
-        font-size: 1.5rem;
-        font-weight: 600;
-        letter-spacing: .1rem; 
+    body {
+        font-size: 56.25%; 
     } 
 
-    .heading-secondary {
-      font-size: 4rem; 
+    .paragraph, .about-interest ,.project-box__text {
+        font-size: 2rem; 
+    } 
+    .projects-tech{
+        margin: .3rem 1rem;
     }
-    
-    #section-projects {
-        padding: 10 0;
-        margin-top: -5rem; 
-        padding: 15rem 0;
-        margin-top: -6rem; 
-    }
- 
-    .project-box {
-        font-size: .5rem;
-        padding: .5rem .5rem;
-        width: 25rem;
-        height: 35rem;
-        margin: 0 0;
-      }
-  
-      .project__logo {
-          height: 10rem;
-          width: auto;
-      }
-      .paragraph, .about-interest ,.project-box__text {
-          font-size: 1.5rem; 
-      } 
-  
-      .projects-tech{
-          margin: .3rem 1rem;
-      } 
-
-      .btn-blue{
-        padding: 0;
-        margin-top: 1.5rem;;
-        font-size: .8rem;
-        font-weight: 600;
-        padding: 0;
-    }
-
     .row {
-        max-width: 120rem;
-        margin: 1rem 4rem; 
-        padding: 0;
+        max-width: 100%;
+        margin: 0 10rem; 
     }
-
-    #section-about {
-        font-weight: 400;
-        padding: 13rem 0;
-        margin-top: -20vh; 
-
-    }
-      
 }
 
 @media only screen and (min-width: 112.15em) {
