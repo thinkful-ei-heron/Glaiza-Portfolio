@@ -448,6 +448,10 @@ body {
     margin-bottom: 1.5rem !important; 
 }
 
+.u-margin-bottom-big {
+    margin-bottom: 3rem !important; 
+}
+
 .about-interest > li > i {
     font-size: 2rem;
     margin-right: 1.5rem;
@@ -540,181 +544,155 @@ body {
 }
 
 /*MEDIA QUERIES*/
+@media only screen and (min-width: 20em) and (max-width: 37.5em) {
 
-@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 62.5%;
+    }
+    
     body {
-        line-height: 1.5;
-        padding:0;
+    font-weight: 400;
+    font-size: .5rem;
+    line-height: 1.7;
+    padding: 0;
+
     }
 
     #header {
-        height: 100vh;
-        clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%); /*(x y, x y, x y, x y) */
-    
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
-
-
-    .heading-primary--main {
-        letter-spacing: 0;
-        font-size: 1.8rem; 
-    }
-
- 	.heading-primary--sub {
-        font-size: .9rem;
-        font-weight: 600;
-        letter-spacing: .1rem; 
-    } 
 
     .header__logo-box {
-        top: 1.5rem;
-        left: 1.5rem;
+    top: 3rem;
+    left: 3rem;
     }
-    
+
     .header__logo {
-        height: 5rem;
-        width: 5rem;
-        
+    height: 5rem;
+    width: 5rem;
+    
+    }
+
+    .header__text-box {
+    top: 43%;
+    }
+
+    .heading-primary--main {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+    }
+
+    .heading-primary--sub {
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+    }
+ 
+    .navigation__button {
+        height: 4rem;
+        width: 4rem;
+        top: 4rem;
+        right: 4rem;
     }
     
-   .navigation__button {
-        height: 3rem;
-        width: 3rem;
-        top: 2rem;
-        right: 2rem;
-    }
-  
     .navigation__background {
-        height: 3rem;
-        width: 3rem;
-        top: 2rem;
-        right: 2rem;
+        height: 4rem;
+        width: 4rem;
+        top: 4rem;
+        right: 4rem;
     }
     
     .navigation__icon {
-        margin-top: 1.5rem; 
-    }
-    
-    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-        width: 2rem;
-        height: 1.5px;
-
-    } 
-
-    .heading-secondary {
-        font-size: 4rem; 
-    }
-    
-    #section-projects {
-        padding: 10 0;
-        margin-top: -5rem; 
-        padding: 15rem 0;
-        margin-top: -6rem; 
-    }
- 
-    .project-box {
-        font-size: .5rem;
-        padding: .5rem .5rem;
-        width: 25rem;
-        height: 35rem;
-        margin: 0 0;
-      }
-  
-      .project__logo {
-          height: 5rem;
-          width: auto;
-      }
-      .paragraph, .about-interest ,.project-box__text {
-          font-size: 1.5rem; 
-      } 
-  
-      .projects-tech{
-          margin: .3rem 1rem;
-      } 
-
-      .btn-blue{
-        padding: 0;
-        margin-top: 1.5rem;;
-        font-size: .8rem;
-        font-weight: 600;
-        padding: 0;
-    }
-
-    .row {
-        max-width: 120rem;
-        margin: 1rem 4rem; 
-        padding: 0;
+        margin-top: 2rem; 
     }
 
     #section-about {
         font-weight: 400;
-        padding: 13rem 0;
+        padding: 25rem 0;
         margin-top: -20vh; 
+    }
+    
+    .heading-secondary {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 2rem;
 
     }
-      
-}
+    .paragraph, .about-interest ,.project-box__text {
+        font-size: 1.6rem; 
+    } 
+    .paragraph:not(:last-child) {
+        margin-bottom: 4rem; 
+    }
+
+    .project-box__text {
+        padding: 0 .5rem;
+    }
+    
+    .row {
+        max-width: 100%;
+        margin: 5% 10%; 
+    }
+    
+    .heading-tertiary {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    #section-projects {
+        padding: 10% 0;
+        margin-top: -12rem; 
+    }
+
+    .heading-projects {
+        font-size: 4rem;
+        font-weight: 600;
+        
+    }
+    
+    .project-box {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+        width: 100%;
+        height: 30%;
+        margin-right: 2%;
+        }
+    
+        .row .col-1-of-2 {
+         width: 100%;
+         margin-bottom: 3rem;
+        }
+
+        .project__logo {
+            object-fit: cover;
+            height: auto; 
+            width: 100%;
+        }
+
+        .projects-tech{
+            margin: 2% 0;
+            font-size: 1.3rem;
+            letter-spacing: .3rem;
+        }
+        
+
+        .paragraph:not(:last-child) {
+            margin-bottom: 2rem; 
+        }
+
+        .btn {
+            margin: 0 2%;
+        }
+}  
 
 @media only screen and (min-width: 37.5em) and (max-width: 56.25em) {
-    html {
-      font-size: 50%; 
-    } 
 
-    .heading-secondary {
-      font-size: 4rem; 
-    } 
-
-    .heading-primary--sub {
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: .8rem;
-    }
-
-    .project-box {
-      font-size: .5rem;
-       padding: .5rem .5rem;
-	   width: 35rem;
-       height: 40rem;
-       margin-right: 1rem;
-    }
-
-    .project__logo {
-        height: 15rem;
-        width: auto;
-    }
-
-    .paragraph, .about-interest ,.project-box__text {
-        font-size: 2rem; 
-    } 
-
-    .projects-tech{
-        margin: .3rem 1rem;
-    }
 }
 
 @media only screen and (min-width: 56.25em) and (max-width: 75em) {
-    html {
-      font-size: 56.25%; 
-    } 
-    body {
-        font-size: 56.25%; 
-    } 
-
-    .paragraph, .about-interest ,.project-box__text {
-        font-size: 2rem; 
-    } 
-    .projects-tech{
-        margin: .3rem 1rem;
-    }
-    .row {
-        max-width: 100%;
-        margin: 0 10rem; 
-    }
-}
-
-@media only screen and (min-width: 112.15em) {
-    html {
-      font-size: 75%; 
-    } 
+    
 }
 
  
