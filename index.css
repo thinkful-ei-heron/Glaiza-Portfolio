@@ -450,8 +450,8 @@ body {
     font-weight: 700;
     text-transform: uppercase; 
     color: rgba(5,74,145, 0.8);
-    font-size: 2rem;
-    margin-top: 5%;
+    font-size: 3rem;
+    margin-top: 3%;
 }
 
 .u-margin-bottom-small {
@@ -578,7 +578,7 @@ body {
 
     #header {
     height: 100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 83vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
     }
 
     .header__logo-box {
