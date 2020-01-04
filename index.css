@@ -363,7 +363,14 @@ body {
 .copyright {
     color: rgba(0,0,102,1);
     font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.copyright-next {
+    font-size: 1rem;
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 /* About Me Section */
