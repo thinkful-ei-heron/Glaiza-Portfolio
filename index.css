@@ -530,7 +530,7 @@ body {
     width: 100%;
 }
 
-.spacerep__logo {
+/* .spacerep__logo {
     height: 276.02px;
     width: 100%;
     object-fit: fill;
@@ -553,7 +553,7 @@ body {
     height: 276.02px;
     width: 100%;
     object-fit: fill;
-} 
+}  */
 
 .projects-tech{
     color: rgba(0,0,102,1);
