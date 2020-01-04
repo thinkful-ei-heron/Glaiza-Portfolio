@@ -407,12 +407,13 @@ body {
 
 .project-box__text {
     text-indent: 5%;
-    font-size: 2.5rem; 
-    padding: 2rem 2rem;
+    font-size: 2rem; 
+    padding: 0 1rem 1rem 1rem;
     text-align: justify;
     text-justify: inter-word;
     color: black;
-    margin: 1rem 0;
+    margin: .5rem 0;
+    /* background-color: red; */
 }
 
 .paragraph:not(:last-child) {
@@ -451,7 +452,7 @@ body {
     text-transform: uppercase; 
     color: rgba(5,74,145, 0.8);
     font-size: 3rem;
-    margin-top: 3%;
+    margin-top: 0;
 }
 
 .u-margin-bottom-small {
@@ -521,6 +522,31 @@ body {
     height: auto; 
     width: 100%;
 }
+
+.spacerep__logo {
+    height: 276.02px;
+    width: 100%;
+    object-fit: fill;
+}
+
+
+.petful__logo {
+    height: 276.02px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.buxinflux__logo {
+    height: 276.02px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.noteful__logo {
+    height: 276.02px;
+    width: 100%;
+    object-fit: fill;
+} 
 
 .projects-tech{
     color: rgba(0,0,102,1);
@@ -592,6 +618,11 @@ body {
     
     }
 
+    /* .spacerep__logo {
+        height: 2em;
+        width: 2rem;
+    } */
+
     .header__text-box {
     top: 43%;
     }
@@ -661,7 +692,7 @@ body {
     .heading-tertiary {
         font-weight: 600;
         font-size: 1.5rem;
-        margin-top: 3%;
+        margin-top: 0;
     }
 
     .about-interest > li > i {
@@ -707,7 +738,8 @@ body {
         font-size: 1.3rem;
         letter-spacing: .3rem;
     }
-        
+
+
     .paragraph:not(:last-child) {
         margin-bottom: 2rem; 
     }
@@ -761,7 +793,7 @@ body {
     .heading-tertiary {
         font-weight: 600;
         font-size: 1.8rem;
-        margin-top: 5%;
+        margin-top: 0;
     }
 
     .about-interest > li > i {
