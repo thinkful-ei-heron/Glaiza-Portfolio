@@ -96,7 +96,7 @@ body {
     height: 95vh;
     background-image: linear-gradient(to right bottom, rgba(5,74,145, 0.8),rgba(202,233,255, 0.8)), url(./img/glaizaW-pic.png);
     background-size: cover;
-
+    background-position: center;
     position: relative;
 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*(x y, x y, x y, x y) */
@@ -117,7 +117,7 @@ body {
 
 .header__text-box {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -264,7 +264,6 @@ body {
     list-style: none;
     text-align: center;
     width: 100%; 
-   
 }
   
 .navigation__item {
@@ -277,7 +276,7 @@ body {
     font-size: 3rem;
     font-weight: 300;
     padding: 1rem 2rem;
-    color: #fff;
+    color: rgba(0,0,102,1);
     text-decoration: none;
     text-transform: uppercase;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
@@ -292,7 +291,7 @@ body {
   
 .navigation__link:hover, .navigation__link:active {
     background-position: 100%;
-    color: var(--color-primary-dark);
+    color: rgba(0,0,102,1);
     transform: translateX(1rem); 
     font-weight: 400;
 }
@@ -364,6 +363,7 @@ body {
     font-size: 1.3rem;
     font-weight: 600;
 }
+
 /* About Me Section */
 
 #section-about {
@@ -386,13 +386,10 @@ body {
     transition: all .2s; 
 }
 
-
 .heading-secondary:hover {
       transform: skewY(2deg) skewX(15deg) scale(1.1);
       text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); 
 }
-
-
 
 .paragraph, .about-interest ,.project-box__text {
     font-family: "Lato", sans-serif;
@@ -401,7 +398,6 @@ body {
     text-justify: inter-word;
     color: black;
 } 
-
 
 .project-box__text {
     padding: 1rem 1rem;
@@ -553,8 +549,9 @@ body {
     body {
         font-size: 56.25%; 
     } 
+
     .paragraph, .about-interest ,.project-box__text {
-        font-size: 2.5rem; 
+        font-size: 2rem; 
     } 
     .projects-tech{
         margin: .3rem 1rem;
@@ -592,6 +589,7 @@ body {
         height: 15rem;
         width: auto;
     }
+
     .paragraph, .about-interest ,.project-box__text {
         font-size: 2rem; 
     } 
@@ -669,8 +667,6 @@ body {
     }
       
 }
-
-
 
 @media only screen and (min-width: 112.15em) {
     html {
